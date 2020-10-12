@@ -1,0 +1,75 @@
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+
+body{
+ background-color: #666;
+ min-height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.img-accordion{
+    width: 90%; height: 80vh;
+    display: flex;
+}
+
+.img{
+ flex: 1;
+ height: 100%;
+ transform: skew(5deg);
+ cursor: pointer;
+ margin: 0 2px;
+ transition: all 0.3s;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center;
+ border: 1px solid #222;
+ position: relative;
+
+}
+
+.img1 {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/be/KeizersgrachtReguliersgrachtAmsterdam.jpg")
+}
+
+.img2 {
+    background-image: url("https://www.cataloniahotels.com/en/blog/wp-content/uploads/2017/06/cataloniasantodomingo.jpg")
+}
+
+
+.img3 {
+    background-image: url("https://cdn.londonandpartners.com/visit/general-london/areas/river/76709-640x360-houses-of-parliament-and-london-eye-on-thames-from-above-640.jpg")
+}
+
+.img4 {
+    background-image: url("https://www.cia-france.com/media/1558/parcarou1_720x500.jpg")
+}
+
+.img5 {
+    background-image: url("https://loveincorporated.blob.core.windows.net/contentimages/fullsize/38778458-228c-4554-872b-383704ba2a9d-montreal-lead-image.jpg")
+}
+
+.img p{
+    position: absolute;
+    bottom: 0; left: 0;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    transform: rotate(-90deg);
+    transform-origin: 0% 0%;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    white-space: nowrap;
+}
+
+.img-accordion:hover .img{ transform: skew(0); }
+
+.img:hover{ flex: 5; }
+
+.img:hover p{ 
+    background-color: transparent;
+    border:2px solid #222;
+    color: #222;
+    transform: rotate(0deg);
+}
